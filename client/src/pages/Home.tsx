@@ -1,25 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* =============================================================
+   Home Page — LUXE HAIR SALON
+   Neo-Noir Cinematic Design
+   All sections assembled
+   ============================================================= */
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import GallerySection from "@/components/GallerySection";
+import StylistsSection from "@/components/StylistsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import BookingSection from "@/components/BookingSection";
+import Footer from "@/components/Footer";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div
+      className="min-h-screen"
+      style={{ background: "oklch(0.13 0.008 260)" }}
+    >
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <GallerySection />
+      <StylistsSection />
+      <TestimonialsSection />
+      <BookingSection />
+      <Footer />
     </div>
   );
 }
